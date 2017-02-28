@@ -21,3 +21,9 @@
 
 en:
   hello: "Hello world"
+  remember_me: "Remember me on this computer"
+  invalid_login: "Invalid email/password combination"
+  not_found_user: "User not found!"
+  create_success_user: "Welcome to the Sample App!"
+  log_in: "Log in"
+  create_user: "Sign up now!"
