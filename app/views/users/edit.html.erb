@@ -1,0 +1,30 @@
+<% provide :title, t("edit_user") %>
+<% provide :button_text, t("submit_edit_user") %>
+<h1><%= t "update_account_header" %></h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_tag "/users/#{@user.id}", {method: :patch} do %>
+      <%= render "shared/error_messages" %>
+
+      <%= label_tag :name %>
+      <%= text_field_tag "user[name]", "#{@user.name}", class: "form-control" %>
+
+      <%= label_tag :email %>
+      <%= email_field_tag "user[email]", "#{@user.email}", class: "form-control" %>
+
+      <%= label_tag :password %>
+      <%= password_field_tag "user[password]", "", class: "form-control" %>
+
+      <%= label_tag :password_confirmation, t("confirm_password") %>
+      <%= password_field_tag "user[password_confirmation]", "", class: "form-control" %>
+
+      <%= submit_tag yield(:button_text), class: "btn btn-primary" %>
+    <% end %>
+
+    <div class="gravatar_edit">
+      <%= gravatar_for @user %>
+      <a href="http://gravatar.com/emails" target="_blank"><%= t "edit_avatar" %></a>
+    </div>
+  </div>
+</div>
