@@ -22,3 +22,12 @@
 
 # Ignore Procfile
 Procfile
+/public/uploads/*
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+test/*
+config/settings/development.yml
+config/settings/production.yml
+config/settings/test.yml
