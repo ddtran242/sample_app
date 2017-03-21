@@ -99,3 +99,7 @@ en:
   signup_button: "Sign up now!"
   microposts: "Microposts"
   micropost: "micropost"
+  following: "following"
+  followers: "followers"
+  follow: "Follow"
+  unfollow: "Unfollow"
